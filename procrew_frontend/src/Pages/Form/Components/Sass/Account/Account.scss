@@ -17,7 +17,7 @@ form {
             color: $black;
         }
         
-        #inputs {
+        #signup-inputs {
             @include flex(column, auto, auto);
             margin: 1rem 0;
             gap: 1rem;
@@ -38,7 +38,7 @@ form {
             }
         }
     
-        #submit {
+        #signup-submit {
             @include button();
     
             &:hover {
@@ -46,6 +46,49 @@ form {
             }
         }
     
+        button {
+            @include button();
+    
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    }
+
+    #login {
+        @include flex(column, center, auto);
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        gap: 1rem;
+        display: none;
+
+        h1 {
+            color: $black;
+        }
+
+        #login-inputs {
+            @include flex(column, auto, auto);
+            margin: 1rem 0;
+            gap: 1rem;
+    
+            input {
+                padding: 0.25rem 0;
+                border: none;
+                outline: none;
+                border-bottom: solid $black 1px;
+            }
+        }
+
+        #login-submit {
+            @include button();
+    
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+
         button {
             @include button();
     

@@ -16,7 +16,7 @@ form #signup {
 form #signup h1 {
   color: #313131;
 }
-form #signup #inputs {
+form #signup #signup-inputs {
   display: flex;
   flex-direction: column;
   justify-content: auto;
@@ -24,22 +24,22 @@ form #signup #inputs {
   margin: 1rem 0;
   gap: 1rem;
 }
-form #signup #inputs input {
+form #signup #signup-inputs input {
   padding: 0.25rem 0;
   border: none;
   outline: none;
   border-bottom: solid #313131 1px;
 }
-form #signup #inputs #name {
+form #signup #signup-inputs #name {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: auto;
 }
-form #signup #inputs #name input {
+form #signup #signup-inputs #name input {
   width: 45%;
 }
-form #signup #submit {
+form #signup #signup-submit {
   background-color: #c41319;
   color: #fff;
   border: none;
@@ -48,7 +48,7 @@ form #signup #submit {
   padding: 0.5rem 1rem;
   transition-duration: 0.5s;
 }
-form #signup #submit:hover {
+form #signup #signup-submit:hover {
   background-color: #040457;
 }
 form #signup button {
@@ -61,5 +61,58 @@ form #signup button {
   transition-duration: 0.5s;
 }
 form #signup button:hover {
+  background-color: #040457;
+}
+form #login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  gap: 1rem;
+  display: none;
+}
+form #login h1 {
+  color: #313131;
+}
+form #login #login-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+form #login #login-inputs input {
+  padding: 0.25rem 0;
+  border: none;
+  outline: none;
+  border-bottom: solid #313131 1px;
+}
+form #login #login-submit {
+  background-color: #c41319;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.5s;
+}
+form #login #login-submit:hover {
+  background-color: #040457;
+}
+form #login button {
+  background-color: #c41319;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.5s;
+}
+form #login button:hover {
   background-color: #040457;
 }/*# sourceMappingURL=Account.css.map */
