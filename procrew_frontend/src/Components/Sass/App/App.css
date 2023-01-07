@@ -12,4 +12,12 @@ html {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  color: #888;
 }/*# sourceMappingURL=App.css.map */

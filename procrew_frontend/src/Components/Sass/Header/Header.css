@@ -32,7 +32,7 @@ header #main-nav #main-nav-container #main-nav-left #main-nav-links {
   align-items: center;
 }
 header #main-nav #main-nav-container #main-nav-left #main-nav-links a {
-  color: #6f6f6f;
+  color: #888;
   margin-left: 1rem;
   transition-duration: 0.5s;
 }
@@ -57,7 +57,7 @@ header #main-nav #main-nav-container #main-nav-right button {
 }
 header #main-nav #main-nav-container #main-nav-right button:hover {
   background-color: transparent;
-  color: #6f6f6f;
+  color: #c41319;
 }
 header #main-nav #main-nav-container #menu {
   display: none;
@@ -108,7 +108,7 @@ header #side-nav #side-nav-container #side-nav-bottom {
     padding: 1rem 0;
   }
   header #side-nav #side-nav-container #side-nav-top {
-    border-bottom: solid 1px #6f6f6f;
+    border-bottom: solid 1px #888;
   }
   header #side-nav #side-nav-container a, header #side-nav #side-nav-container button {
     background-color: #c41319;
