@@ -14,3 +14,10 @@
     padding: 0.5rem 1rem;
     transition-duration: 0.5s;
 }
+
+@mixin grid($columns, $rows, $gap) {
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+    gap: $gap;
+}

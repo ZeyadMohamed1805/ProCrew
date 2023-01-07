@@ -1,4 +1,4 @@
-#home {
+#body {
   display: flex;
   flex-direction: auto;
   justify-content: center;
@@ -6,15 +6,15 @@
   min-height: calc(100vh - 125px);
   background-color: #040457;
 }
-#home #home-container {
+#body #body-container {
   min-height: calc(100vh - 125px);
   width: 80%;
 }
-#home #home-container #home-carousel {
+#body #body-container #body-carousel {
   display: flex;
   position: relative;
 }
-#home #home-container #home-carousel #left-arrow, #home #home-container #home-carousel #right-arrow {
+#body #body-container #body-carousel #left-arrow, #body #body-container #body-carousel #right-arrow {
   background-color: #fff;
   color: #c41319;
   box-shadow: 0 0 5px;
@@ -22,12 +22,12 @@
   border-radius: 50px;
   cursor: pointer;
   position: absolute;
-  top: calc(50vh - 125px);
+  bottom: 50%;
   transition-duration: 0.5s;
 }
-#home #home-container #home-carousel #left-arrow:hover, #home #home-container #home-carousel #right-arrow:hover {
+#body #body-container #body-carousel #left-arrow:hover, #body #body-container #body-carousel #right-arrow:hover {
   color: #040457;
 }
-#home #home-container #home-carousel #right-arrow {
+#body #body-container #body-carousel #right-arrow {
   right: 0;
-}/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=Body.css.map */

@@ -20,7 +20,7 @@ export const Header = () => {
                 <div id="main-nav-left">
                     <img src={require("../Images/logo2.png")} alt="ProCrew" />
                     <div id="main-nav-links">
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                         <a href="#">Join</a>
                         <a href="#">About</a>
                     </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Carousel_Item } from '../Carousel_Item/Carousel_Item';
-import "../Sass/Home/Home.css";
+import "../Sass/Body/Body.css";
 
-export const Home = () => {
+export const Body = () => {
   let [carouselItemIndex, setCarouselItemIndex] = useState(0);
 
   // Storing the Carousel Properties in an Array of Objects
@@ -34,9 +34,9 @@ export const Home = () => {
   }
 
   return (
-    <section id="home">
-        <div id="home-container">
-            <div id="home-carousel">
+    <section id="body">
+        <div id="body-container">
+            <div id="body-carousel">
                 {carouselItems[carouselItemIndex]}
                 <i id="left-arrow" className="fa-solid fa-chevron-left" onClick={() => carouselItemsSwitch("back")}></i>
                 <i id="right-arrow" className="fa-solid fa-chevron-right" onClick={() => carouselItemsSwitch("next")}></i>

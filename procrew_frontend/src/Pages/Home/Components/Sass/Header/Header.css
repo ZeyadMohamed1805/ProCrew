@@ -87,6 +87,7 @@ header #main-nav #main-nav-container #menu {
     align-items: auto;
     width: 100%;
     position: absolute;
+    z-index: 999;
   }
   header #side-nav #side-nav-container {
     display: flex;
@@ -94,7 +95,7 @@ header #main-nav #main-nav-container #menu {
     justify-content: auto;
     align-items: center;
     width: 80%;
-    background-color: #040457;
+    background-color: #920d0d;
     border-radius: 10px;
     padding: 1rem 2rem;
   }
@@ -126,11 +127,11 @@ header #side-nav #side-nav-container #side-nav-bottom {
     transition-duration: 0.25s;
   }
   header #side-nav #side-nav-container a:hover, header #side-nav #side-nav-container button:hover {
-    color: #920d0d;
+    color: #313131;
   }
   header #side-nav #side-nav-container button {
     width: 100%;
-    background-color: #c41319;
+    background-color: #888;
     transition-duration: 0.5s;
   }
   header #side-nav #side-nav-container button:hover {
