@@ -27,8 +27,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <div id="main-nav-right">
-                    <Link to={"/form"}><button>Log In</button></Link>
-                    <Link to={"/form"}><button>Sign Up</button></Link>
+                    <Link to={"/form"}><button>Account</button></Link>
                 </div>
                 <i id="menu" className="fa-solid fa-burger" onClick={() => {sideNavDisplay == "none" ? setSideNavDisplay("flex") : setSideNavDisplay("none")}}></i>
             </div>
@@ -41,8 +40,7 @@ export const Header = () => {
                     <a href="#">About</a>
                 </div>
                 <div id="side-nav-bottom">
-                    <Link style={{width: "100%"}} to={"/form"}><button>Log In</button></Link>
-                    <Link style={{width: "100%"}} to={"/form"}><button>Sign Up</button></Link>
+                    <Link style={{width: "100%"}} to={"/form"}><button>Account</button></Link>
                 </div>
             </div>
         </nav>
