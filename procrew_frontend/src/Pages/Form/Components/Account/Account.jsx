@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../Sass/Account/Account.css";
 
 export const Account = () => {
@@ -30,7 +31,7 @@ export const Account = () => {
           <input type="password" placeholder="Password" />
           <input type="password" placeholder="Retype password" />
         </div>
-        <input id="signup-submit" type="submit" value="Sign Up" />
+        <Link to={"/dashboard"}><input id="signup-submit" type="submit" value="Sign Up" /></Link>
         <p>Already have an account?</p>
         <button onClick={(e) => {e.preventDefault(); handleDisplay("signup")}}>Log In</button>
       </div>
@@ -40,7 +41,7 @@ export const Account = () => {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
         </div>
-        <input id="login-submit" type="submit" value="Log In" />
+        <Link to={"/dashboard"}><input id="login-submit" type="submit" value="Log In" /></Link>
         <p>Don't have an account?</p>
         <button onClick={(e) => {e.preventDefault(); handleDisplay("login")}}>Register Now!</button>
       </div>
