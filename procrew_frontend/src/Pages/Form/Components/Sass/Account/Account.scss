@@ -1,0 +1,57 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+form {
+    width: 80%;
+    max-width: 500px;
+
+    #signup {
+        @include flex(column, center, auto);
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        gap: 1rem;
+    
+        h1 {
+            color: $black;
+        }
+        
+        #inputs {
+            @include flex(column, auto, auto);
+            margin: 1rem 0;
+            gap: 1rem;
+    
+            input {
+                padding: 0.25rem 0;
+                border: none;
+                outline: none;
+                border-bottom: solid $black 1px;
+            }
+    
+            #name {
+                @include flex(row, space-between, auto);
+    
+                input {
+                    width: 45%;
+                }
+            }
+        }
+    
+        #submit {
+            @include button();
+    
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    
+        button {
+            @include button();
+    
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    }
+}

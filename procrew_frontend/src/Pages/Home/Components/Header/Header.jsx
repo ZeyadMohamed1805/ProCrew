@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../Sass/Header/Header.css";
 
 export const Header = () => {
@@ -26,8 +27,8 @@ export const Header = () => {
                     </div>
                 </div>
                 <div id="main-nav-right">
-                    <button>Log In</button>
-                    <button>Sign Up</button>
+                    <Link to={"/form"}><button>Log In</button></Link>
+                    <Link to={"/form"}><button>Sign Up</button></Link>
                 </div>
                 <i id="menu" className="fa-solid fa-burger" onClick={() => {sideNavDisplay == "none" ? setSideNavDisplay("flex") : setSideNavDisplay("none")}}></i>
             </div>
@@ -40,8 +41,8 @@ export const Header = () => {
                     <a href="#">About</a>
                 </div>
                 <div id="side-nav-bottom">
-                    <button>Log In</button>
-                    <button>Sign Up</button>
+                    <Link style={{width: "100%"}} to={"/form"}><button>Log In</button></Link>
+                    <Link style={{width: "100%"}} to={"/form"}><button>Sign Up</button></Link>
                 </div>
             </div>
         </nav>

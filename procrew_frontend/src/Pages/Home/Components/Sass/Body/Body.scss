@@ -1,8 +1,5 @@
 // Imports
 
-@import "../Variables/Variables";
-@import "../Mixins/Mixins";
-
 #body {
     @include flex(auto, center, center);
     min-height: calc(100vh - 125px);

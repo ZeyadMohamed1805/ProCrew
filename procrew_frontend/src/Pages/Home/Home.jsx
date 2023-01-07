@@ -1,4 +1,3 @@
-import "./Components/Sass/Home/Home.css";
 import { Header } from "./Components/Header/Header";
 import { Body } from "./Components/Body/Body";
 
