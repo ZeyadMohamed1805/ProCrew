@@ -7,5 +7,9 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=App.css.map */

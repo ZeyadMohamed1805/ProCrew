@@ -1,0 +1,83 @@
+// Imports
+
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+// Desktop
+
+#main-nav {
+    @include flex(row, center, center);
+    background-color: $white;
+    box-shadow: 0 0 1px;
+
+    #main-nav-container {
+        width: 80%;
+        @include flex(row, space-between, center);
+
+        #main-nav-left {
+            @include flex(row, flex-start, center);
+
+            img {
+                width: 125px;
+                margin-right: 1rem;
+            }
+
+            #main-nav-links {
+                @include flex(row, flex-start, center);
+
+                a {
+                    color: $grey;
+                    margin-left: 1rem;
+                    transition-duration: 0.5s;
+
+                    &:hover {
+                        color: $light-red;
+                    }
+                }
+            }
+        }
+
+        #main-nav-right {
+            @include flex(row, flex-start, center);
+
+            button {
+                @include button();
+                margin-left: 1rem;
+
+                &:hover {
+                    background-color: transparent;
+                    color: $grey;
+                }
+            }
+        }
+
+        i {
+            display: none;
+        }
+    }
+}
+
+// Mobile
+
+@media (max-width: 1000px) {
+    #main-nav {
+        #main-nav-container {
+            #main-nav-left {
+                #main-nav-links {
+                    display: none;
+                }
+            }
+
+            #main-nav-right {
+                display: none;
+            }
+
+            i {
+                color: $light-red;
+                font-size: 1.25rem;
+                cursor: pointer;
+                display: block;
+            }
+        }
+    }
+}
