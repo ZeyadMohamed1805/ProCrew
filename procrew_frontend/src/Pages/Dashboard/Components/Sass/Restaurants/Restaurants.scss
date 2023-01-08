@@ -1,0 +1,49 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+#restaurants {
+    @include flex(auto, center, center);
+    min-height: calc(100vh - 125px);
+    background-color: $dark-blue;
+
+    #restaurants-container {
+        width: 80%;
+        margin: 2rem 0;
+        @include flex(column, flex-start, flex-start);
+        gap: 2rem;
+
+        input {
+            width: 20rem;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        #restaurants-grid {
+            width: 100%;
+            @include grid(repeat(4, 1fr), auto, 2rem);
+        }
+
+        .restaurant {
+            @include flex(column, center, center);
+            height: 10rem;
+            background-color: $dark-red;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button {
+            @include button();
+            align-self: center;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+}

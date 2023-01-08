@@ -17,7 +17,7 @@
 
 @mixin grid($columns, $rows, $gap) {
     display: grid;
-    grid-template-columns: $column;
+    grid-template-columns: $columns;
     grid-template-rows: $rows;
     gap: $gap;
 }

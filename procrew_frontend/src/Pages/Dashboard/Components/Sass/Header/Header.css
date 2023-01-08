@@ -78,7 +78,7 @@ header #side-nav #side-nav-container {
   justify-content: auto;
   align-items: center;
   width: 80%;
-  background-color: #040457;
+  background-color: #920d0d;
   border-radius: 10px;
   padding: 1rem 2rem;
 }
@@ -93,7 +93,7 @@ header #side-nav #side-nav-container #side-nav-bottom {
 }
 header #side-nav #side-nav-container #side-nav-top {
   color: #fff;
-  border-bottom: solid 1px #c41319;
+  border-bottom: solid 1px #888;
 }
 header #side-nav #side-nav-container a, header #side-nav #side-nav-container button {
   background-color: #c41319;
@@ -111,11 +111,11 @@ header #side-nav #side-nav-container a, header #side-nav #side-nav-container but
   transition-duration: 0.25s;
 }
 header #side-nav #side-nav-container a:hover, header #side-nav #side-nav-container button:hover {
-  color: #fff;
+  color: #313131;
 }
 header #side-nav #side-nav-container button {
   width: 100%;
-  background-color: #920d0d;
+  background-color: #888;
   transition-duration: 0.5s;
 }
 header #side-nav #side-nav-container button:hover {

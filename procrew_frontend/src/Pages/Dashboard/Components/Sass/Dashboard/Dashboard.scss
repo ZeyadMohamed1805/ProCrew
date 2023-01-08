@@ -1,2 +1,9 @@
 @import "../Variables/Variables";
 @import "../Mixins/Mixins";
+
+#categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 5rem);
+    gap: 2rem;
+}
