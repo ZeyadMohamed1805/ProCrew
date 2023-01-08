@@ -1,0 +1,79 @@
+form {
+  width: 80%;
+  max-width: 500px;
+}
+form #billing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  gap: 1rem;
+}
+form #billing h1 {
+  color: #313131;
+}
+form #billing #billing-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+form #billing #billing-inputs input {
+  padding: 0.25rem 0;
+  border: none;
+  outline: none;
+  border-bottom: solid #313131 1px;
+}
+form #billing #billing-items {
+  width: 100%;
+}
+form #billing #billing-items .items-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+form #billing #billing-items #total {
+  border-top: solid #888 1px;
+}
+form #billing #updates {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+form #billing #updates label {
+  color: #313131;
+}
+form #billing #billing-submit {
+  width: 100%;
+  background-color: #c41319;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.5s;
+}
+form #billing #billing-submit:hover {
+  background-color: #040457;
+}
+form #billing button {
+  background-color: #c41319;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.5s;
+}
+form #billing button:hover {
+  background-color: #040457;
+}/*# sourceMappingURL=Billing.css.map */

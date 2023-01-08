@@ -1,0 +1,71 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+form {
+    width: 80%;
+    max-width: 500px;
+
+    #billing {
+        @include flex(column, center, auto);
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        gap: 1rem;
+    
+        h1 {
+            color: $black;
+        }
+        
+        #billing-inputs {
+            @include flex(column, auto, auto);
+            margin: 1rem 0;
+            gap: 1rem;
+    
+            input {
+                padding: 0.25rem 0;
+                border: none;
+                outline: none;
+                border-bottom: solid $black 1px;
+            }
+        }
+
+        #billing-items {
+            width: 100%;
+
+            .items-info {
+                @include flex(row, space-between, center);
+            }
+
+            #total {
+                border-top: solid $grey 1px;
+            }
+        }
+
+        #updates {
+            @include flex(row, flex-start, center);
+            gap: 0.5rem;
+
+            label {
+                color: $black;
+            }
+        }
+    
+        #billing-submit {
+            width: 100%;
+            @include button();
+    
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    
+        button {
+            @include button();
+    
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    }
+}

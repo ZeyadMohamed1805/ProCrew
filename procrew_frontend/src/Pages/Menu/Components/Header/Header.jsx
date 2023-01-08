@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../Sass/Header/Header.css";
 
 export const Header = () => {
@@ -25,7 +26,7 @@ export const Header = () => {
                     Cart Item
                 </div>
                 <div id="side-nav-bottom">
-                    <button>Checkout</button>
+                    <Link to={"/checkout"} style={{width: "100%"}}><button>Checkout</button></Link>
                 </div>
             </div>
         </nav>
