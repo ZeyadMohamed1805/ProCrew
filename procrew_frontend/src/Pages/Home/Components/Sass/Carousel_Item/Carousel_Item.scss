@@ -1,3 +1,6 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
 .carousel-item {
     @include flex(column, center, center);
     min-height: calc(100vh - 125px);
