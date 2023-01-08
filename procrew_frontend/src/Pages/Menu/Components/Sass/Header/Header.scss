@@ -1,0 +1,143 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+// Desktop
+
+header {
+    position: relative;
+
+    #main-nav {
+        @include flex(row, center, center);
+        background-color: $white;
+
+        #main-nav-container {
+            width: 80%;
+            @include flex(row, space-between, center);
+
+            #main-nav-left {
+                @include flex(row, flex-start, center);
+
+                img {
+                    width: 125px;
+                    margin-right: 1rem;
+                }
+
+                #main-nav-links {
+                    @include flex(row, flex-start, center);
+
+                    a {
+                        color: $grey;
+                        margin-left: 1rem;
+                        transition-duration: 0.5s;
+
+                        &:hover {
+                            color: $light-red;
+                        }
+                    }
+                }
+            }
+
+            #main-nav-right {
+                @include flex(row, flex-start, center);
+
+                button {
+                    @include button();
+                    margin-left: 1rem;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $light-red;
+                    }
+                }
+            }
+
+            #menu {
+                display: none;
+            }
+        }
+    }
+
+    #side-nav {
+        @include flex(row, center, auto);
+        width: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+
+        #side-nav-container {
+            @include flex(column, auto, center);
+            width: 80%;
+            background-color: $dark-red;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+
+            #side-nav-top,
+            #side-nav-bottom {
+                @include flex(column, auto, center);
+                width: 100%;
+                padding: 1rem 0;
+            }
+
+            #side-nav-top {
+                color: $white;
+                border-bottom: solid 1px $grey;
+            }
+
+            a, button {
+                @include button();
+                background-color: transparent;
+                color: $white;
+                margin: 0.25rem 0;
+                padding: 0.5rem 1rem;
+                text-align: center;
+                transition-duration: 0.25s;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            button {
+                width: 100%;
+                background-color: $grey;
+                transition-duration: 0.5s;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+
+@media (max-width: 1000px) {
+    header {
+        #main-nav {
+            #main-nav-container {
+                #main-nav-left {
+                    #main-nav-links {
+                        display: none;
+                    }
+                }
+
+                #main-nav-right {
+                    display: none;
+                }
+
+                #menu {
+                    color: $light-red;
+                    font-size: 1.25rem;
+                    cursor: pointer;
+                    display: block;
+                    transition-duration: 0.5s;
+
+                    &:hover {
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}

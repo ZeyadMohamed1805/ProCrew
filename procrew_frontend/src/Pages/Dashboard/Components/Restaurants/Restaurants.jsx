@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../Sass/Restaurants/Restaurants.css";
 
 export const Restaurants = () => {
@@ -34,10 +35,12 @@ export const Restaurants = () => {
             <input type="search" placeholder="Search by Name & Category..." />
             <div id="restaurants-grid">
               {displayedRestaurants.map(restaurant => (
-                  <div key={restaurant.id} className="restaurant">
+                  <Link to={"/menu"}>
+                    <div key={restaurant.id} className="restaurant">
                       <i>{restaurant.icon}</i>
                       <p>{restaurant.title}</p>
-              </div>
+                    </div>
+                  </Link>
               ))}
             </div>
             <button onClick={() => setLoadCounter(previous => previous + 8)}>Load More!</button>
