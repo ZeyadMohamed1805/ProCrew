@@ -7,11 +7,18 @@ export const Account = () => {
   const [signupDisplay, setSignupDisplay] = useState("none");
   const [loginDisplay, setLoginDisplay] = useState("flex");
   const [clientsAPI, setClientsAPI] = useState([]);
+  const [ownerAPI, setOwnersAPI] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/getclients")
     .then(response => response.json())
     .then(data => {console.log(data); setClientsAPI(data)});
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/getowners")
+    .then(response => response.json())
+    .then(data => {console.log(data); setOwnersAPI(data)});
   }, []);
 
   const handleDisplay = (form) => {
@@ -33,6 +40,14 @@ export const Account = () => {
       if (client.email.toLowerCase() === email.toLowerCase()) {
         if (client.password.toLowerCase() === password.toLowerCase()) {
           window.location.href = "/dashboard";
+        }
+      }
+    })
+    
+    ownerAPI.forEach(owner => {
+      if (owner.email.toLowerCase() === email.toLowerCase()) {
+        if (owner.password.toLowerCase() === password.toLowerCase()) {
+          window.location.href = `/owner/${owner.id}`;
         }
       }
     })
