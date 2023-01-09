@@ -7,12 +7,15 @@ export const Header = (props) => {
   const [sideNavDisplay, setSideNavDisplay] = useState("none");
 
   const handleCheckout = () => {
+    let ids = [];
     let names = [];
     let prices = [];
+    let counter = -1;
 
     props.cartItem.forEach(item => {
+        ids.push(String(++counter));
         names.push(item.name);
-        prices.push(item.price);
+        prices.push(String(item.price));
     });
 
     fetch("http://localhost:5000/addcheckout", {
@@ -21,7 +24,7 @@ export const Header = (props) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        id: 0,
+        id: ids,
         name: names,
         price: prices
       })
