@@ -26,21 +26,21 @@ export const Lists = (props) => {
                   <h3>{item.breakfast_meal}</h3>
                   <div className="lists-add">
                     <p>${item.breakfast_price}.00</p>
-                    <button >Add Item</button>
+                    <button>Add Item</button>
                   </div>
                 </div>
                 <div className="lists-info">
                   <h3>{item.lunch_meal}</h3>
                   <div className="lists-add">
                     <p>${item.lunch_price}.00</p>
-                    <button >Add Item</button>
+                    <button>Add Item</button>
                   </div>
                 </div>
                 <div className="lists-info">
                   <h3>{item.dinner_meal}</h3>
                   <div className="lists-add">
                     <p>${item.dinner_price}.00</p>
-                    <button >Add Item</button>
+                    <button>Add Item</button>
                   </div>
                 </div>
               </div>

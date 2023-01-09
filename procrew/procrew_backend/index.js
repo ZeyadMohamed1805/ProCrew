@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const mysql = require("mysql");
 
 // Create connection
@@ -22,16 +23,18 @@ database.connect((error) => {
 const app = express();
 
 // Insert
-const insertClient = (id, firstname, lastname, email, password) => {
-    app.get(`/addclient`, (request, response) => {
-        let client = {id: id, firstname: firstname, lastname: lastname, email: email, password: password};
-        let sql = `INSERT INTO clients SET ?`;
-        let query = database.query(sql, client, (error, result) => {
+const insertData = (table) => {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: false}));
+    app.post(`/add${table}`, (request, response) => {
+        let object = {id: `${request.body.id}`, firstname: `${request.body.firstname}`, lastname: `${request.body.lastname}`, email: `${request.body.email}`, password: `${request.body.password}`};
+        let sql = `INSERT INTO ${table} SET ?`;
+        let query = database.query(sql, object, (error, result) => {
             if (error) {
                 throw error;
             }
-            console.log(result);
-            response.send("Client added...");
+            console.log(request.body);
+            response.send(result);
         })
     })
 }
@@ -81,7 +84,7 @@ const updateOneData = (table, property, value) => {
 
 // Delete
 const deleteData = (table) => {
-    app.get(`/delete${table}/:id`, (request, response) => {
+    app.post(`/delete${table}/:id`, (request, response) => {
         let sql = `DELETE FROM ${table} WHERE id = ${request.params.id}`;
         let query = database.query(sql, (error, result) => {
             if (error) {
@@ -99,6 +102,9 @@ selectData("menus");
 selectOneData("clients");
 selectOneData("owners");
 selectOneData("menus");
+insertData("clients");
+insertData("owners");
+insertData("menus");
 
 app.listen("5000", () => {
     console.log("Server started on port 5000");

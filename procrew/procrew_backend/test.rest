@@ -1,1 +1,10 @@
-GET http://localhost:5000/getmenus/3
+POST http://localhost:5000/addclients
+Content-Type: application/json
+
+{
+    "id": 10,
+    "firstname": "firstname",
+    "lastname": "lastname",
+    "email": "email",
+    "password": "password"
+}
