@@ -1,0 +1,66 @@
+#lists {
+  display: flex;
+  flex-direction: auto;
+  justify-content: center;
+  align-items: auto;
+  background-color: #040457;
+}
+#lists #lists-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: auto;
+  min-height: calc(100vh - 125px);
+  width: 80%;
+  padding: 2rem 0;
+}
+#lists #lists-container #lists-items {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: #fff;
+}
+#lists #lists-container #lists-items .lists-section .lists-header {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: solid #888 1px;
+}
+#lists #lists-container #lists-items .lists-section .lists-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: solid #888 1px;
+}
+#lists #lists-container #lists-items .lists-section .lists-info .lists-add {
+  display: flex;
+  flex-direction: row;
+  justify-content: auto;
+  align-items: center;
+  gap: 1rem;
+}
+#lists #lists-container #lists-items .lists-section .lists-info .lists-add button {
+  background-color: #c41319;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.5s;
+}
+#lists #lists-container #lists-items .lists-section .lists-info .lists-add button:hover {
+  background-color: transparent;
+  color: #313131;
+}
+
+@media (max-width: 700px) {
+  #lists #lists-container #lists-items .lists-section .lists-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=Lists.css.map */

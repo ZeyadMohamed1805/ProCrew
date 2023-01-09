@@ -1,0 +1,65 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+#lists {
+    @include flex(auto, center, auto);
+    background-color: $dark-blue;
+
+    #lists-container {
+        @include flex(row, center, auto);
+        min-height: calc(100vh - 125px);
+        width: 80%;
+        padding: 2rem 0;
+
+        #lists-items {
+            height: fit-content;
+            width: 100%;
+            background-color: $white;
+
+            .lists-section {
+
+                .lists-header {
+                    text-align: center;
+                    padding: 1rem 0;
+                    border-top: solid $grey 1px;
+                }
+
+                .lists-info {
+                    @include flex(row, space-between, center);
+                    padding: 1rem;
+                    border-top: solid $grey 1px;
+
+                    .lists-add {
+                        @include flex(row, auto, center);
+                        gap: 1rem;
+
+                        button {
+                            @include button();
+
+                            &:hover {
+                                background-color: transparent;
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #lists {
+        #lists-container {
+            #lists-items {
+                .lists-section {
+
+                    .lists-info {
+                        @include flex(column, auto, center);
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
