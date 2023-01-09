@@ -81,6 +81,11 @@ header {
             #side-nav-top {
                 color: $white;
                 border-bottom: solid 1px $grey;
+                
+                p {
+                    @include flex(row, space-between, center);
+                    width: 100%;
+                }
             }
 
             a, button {

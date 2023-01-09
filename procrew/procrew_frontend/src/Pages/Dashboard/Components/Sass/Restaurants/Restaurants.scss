@@ -58,6 +58,40 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+    #restaurants {
+        #restaurants-container {
+            #restaurants-grid {
+                @include grid(repeat(3, 1fr), auto, 2rem);
+            }
+        }
+    }
+}
 
+@media (max-width: 900px) {
+    #restaurants {
+        #restaurants-container {
+            #searches {
+                @include flex(column, center, center);
+                gap: 1rem;
+                input {
+                    width: 100%;
+                }
+            }
+
+            #restaurants-grid {
+                @include grid(repeat(2, 1fr), auto, 2rem);
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #restaurants {
+        #restaurants-container {
+            #restaurants-grid {
+                @include grid(1fr, auto, 2rem);
+            }
+        }
+    }
 }

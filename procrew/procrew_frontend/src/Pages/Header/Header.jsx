@@ -49,7 +49,7 @@ export const Header = (props) => {
             <div id="side-nav-container">
                     {props.cartItem.map(item => (
                         <div id="side-nav-top">
-                            <p>{item.name}{item.price}</p>
+                            <p><span>{item.name}</span>${item.price}.00</p>
                         </div>
                     ))}
                 <div id="side-nav-bottom">

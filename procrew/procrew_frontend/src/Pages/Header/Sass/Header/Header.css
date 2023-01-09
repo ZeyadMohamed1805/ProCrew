@@ -95,6 +95,13 @@ header #side-nav #side-nav-container #side-nav-top {
   color: #fff;
   border-bottom: solid 1px #888;
 }
+header #side-nav #side-nav-container #side-nav-top p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 header #side-nav #side-nav-container a, header #side-nav #side-nav-container button {
   background-color: #c41319;
   color: #fff;

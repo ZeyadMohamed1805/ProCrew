@@ -65,4 +65,39 @@
 }
 #restaurants #restaurants-container button:hover {
   background-color: transparent;
+}
+
+@media (max-width: 1200px) {
+  #restaurants #restaurants-container #restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  #restaurants #restaurants-container #searches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  #restaurants #restaurants-container #searches input {
+    width: 100%;
+  }
+  #restaurants #restaurants-container #restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  #restaurants #restaurants-container #restaurants-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=Restaurants.css.map */
