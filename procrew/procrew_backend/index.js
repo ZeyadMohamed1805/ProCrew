@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mysql = require("mysql");
 
 // Create connection
@@ -37,6 +38,7 @@ const insertClient = (id, firstname, lastname, email, password) => {
 
 // Select All
 const selectData = (table) => {
+    app.use(cors());
     app.get(`/get${table}`, (request, response) => {
         let sql = `SELECT * FROM ${table}`;
         let query = database.query(sql, (error, result) => {
