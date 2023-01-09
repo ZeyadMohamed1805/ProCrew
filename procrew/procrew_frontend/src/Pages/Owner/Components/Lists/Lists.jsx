@@ -14,6 +14,12 @@ export const Lists = (props) => {
     .then(response => response.json())
     .then(data => {console.log(data); setMenuAPI(data)});
   }, []);
+
+  const handleDelete = () => {
+    fetch(`http://localhost:5000/deletemenus/${id}`, {method: "DELETE"})
+    .then(response => response.json())
+    .then(data => console.log(data));
+  }
   
   return (
     <div id="lists">
@@ -26,29 +32,24 @@ export const Lists = (props) => {
                   <h3>{item.breakfast_meal}</h3>
                   <div className="lists-add">
                     <p>${item.breakfast_price}.00</p>
-                    <button>Update Item</button>
-                    <button>Delete Item</button>
                   </div>
                 </div>
                 <div className="lists-info">
                   <h3>{item.lunch_meal}</h3>
                   <div className="lists-add">
                     <p>${item.lunch_price}.00</p>
-                    <button>Update Item</button>
-                    <button>Delete Item</button>
                   </div>
                 </div>
                 <div className="lists-info">
                   <h3>{item.dinner_meal}</h3>
                   <div className="lists-add">
                     <p>${item.dinner_price}.00</p>
-                    <button>Update Item</button>
-                    <button>Delete Item</button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+          <button onClick={handleDelete}>Delete Menu</button>
         </div>
     </div>
   )

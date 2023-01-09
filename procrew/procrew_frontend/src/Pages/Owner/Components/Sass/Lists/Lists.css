@@ -7,12 +7,13 @@
 }
 #lists #lists-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   min-height: calc(100vh - 125px);
   width: 80%;
   padding: 2rem 0;
+  gap: 1rem;
 }
 #lists #lists-container #lists-items {
   height: -webkit-fit-content;
@@ -41,7 +42,7 @@
   align-items: center;
   gap: 1rem;
 }
-#lists #lists-container #lists-items .lists-section .lists-info .lists-add button {
+#lists #lists-container button {
   background-color: #c41319;
   color: #fff;
   border: none;
@@ -50,17 +51,6 @@
   padding: 0.5rem 1rem;
   transition-duration: 0.5s;
 }
-#lists #lists-container #lists-items .lists-section .lists-info .lists-add button:hover {
+#lists #lists-container button:hover {
   background-color: transparent;
-  color: #313131;
-}
-
-@media (max-width: 700px) {
-  #lists #lists-container #lists-items .lists-section .lists-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: auto;
-    align-items: center;
-    gap: 1rem;
-  }
 }/*# sourceMappingURL=Lists.css.map */

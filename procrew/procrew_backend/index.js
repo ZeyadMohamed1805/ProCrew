@@ -100,14 +100,14 @@ const updateOneData = (table, property, value) => {
 
 // Delete
 const deleteData = (table) => {
-    app.post(`/delete${table}/:id`, (request, response) => {
+    app.delete(`/delete${table}/:id`, (request, response) => {
         let sql = `DELETE FROM ${table} WHERE id = ${request.params.id}`;
         let query = database.query(sql, (error, result) => {
             if (error) {
                 throw error;
             }
             console.log(result);
-            response.send(`${table} item deleted...`);
+            response.send(result);
         })
     })
 }
@@ -124,6 +124,7 @@ insertData("clients");
 insertData("owners");
 insertData("menus");
 insertItems("checkout");
+deleteData("menus");
 
 app.listen("5000", () => {
     console.log("Server started on port 5000");

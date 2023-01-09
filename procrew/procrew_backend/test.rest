@@ -1,1 +1,1 @@
-GET http://localhost:5000/getcheckout
+DELETE http://localhost:5000/deletemenus/0

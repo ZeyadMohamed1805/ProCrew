@@ -6,10 +6,11 @@
     background-color: $dark-blue;
 
     #lists-container {
-        @include flex(row, center, auto);
+        @include flex(column, flex-start, center);
         min-height: calc(100vh - 125px);
         width: 80%;
         padding: 2rem 0;
+        gap: 1rem;
 
         #lists-items {
             height: fit-content;
@@ -32,33 +33,16 @@
                     .lists-add {
                         @include flex(row, auto, center);
                         gap: 1rem;
-
-                        button {
-                            @include button();
-
-                            &:hover {
-                                background-color: transparent;
-                                color: $black;
-                            }
-                        }
                     }
                 }
             }
         }
-    }
-}
 
-@media (max-width: 700px) {
-    #lists {
-        #lists-container {
-            #lists-items {
-                .lists-section {
+        button {
+            @include button();
 
-                    .lists-info {
-                        @include flex(column, auto, center);
-                        gap: 1rem;
-                    }
-                }
+            &:hover {
+                background-color: transparent;
             }
         }
     }
