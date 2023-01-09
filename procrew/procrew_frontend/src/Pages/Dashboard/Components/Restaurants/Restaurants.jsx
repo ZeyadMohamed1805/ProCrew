@@ -5,6 +5,8 @@ import "../Sass/Restaurants/Restaurants.css";
 
 export const Restaurants = () => {
   const [menusAPI, setMenusAPI] = useState([]);
+  const [searchName, setSearchName] = useState("");
+  const [searchCategory, setSearchCategory] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:5000/getmenus")
@@ -15,9 +17,14 @@ export const Restaurants = () => {
   return (
     <div id="restaurants">
         <div id="restaurants-container">
-            <input type="search" placeholder="Search by Name & Category..." />
+            <div id="searches">
+              <input type="search" placeholder="Search by Name..." onChange={(e) => setSearchName(e.target.value)} />
+              <input type="search" placeholder="Search by Category..." onChange={(e) => setSearchCategory(e.target.value)} />
+            </div>
             <div id="restaurants-grid">
-              {menusAPI.map(menu => (
+              {menusAPI
+              .filter(item => {return searchName.toLowerCase() === "" && searchCategory.toLowerCase() === "" ? item : item.restaurant.toLowerCase().includes(searchName.toLowerCase()) && item.cuisine.toLowerCase().includes(searchCategory.toLowerCase())})
+              .map(menu => (
                   <Link key={menu.id} to={"/menu"}>
                     <div id={menu.id} className="restaurant">
                       <i>{menu.restaurant}</i>
@@ -26,7 +33,6 @@ export const Restaurants = () => {
                   </Link>
               ))}
             </div>
-            <button>Load More!</button>
         </div>
     </div>
   )
