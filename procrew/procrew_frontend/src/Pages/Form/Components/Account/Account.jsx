@@ -38,20 +38,42 @@ export const Account = () => {
     })
   }
 
+  const handleSignup = (e) => {
+    e.preventDefault();
+    const id = clientsAPI.length;
+    const firstname = document.querySelector("#firstname").value;
+    const lastname = document.querySelector("#lastname").value;
+    const email = document.querySelector("#signup-email").value;
+    const password = document.querySelector("#signup-password").value;
+
+    fetch("http://localhost:5000/addclients", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: id,
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        password: password
+      })
+    })
+  }
+
   return (
     <form>
       <div id="signup" style={{display: `${signupDisplay}`}}>
         <h1>Create Account</h1>
         <div id="signup-inputs">
           <div id="name">
-            <input type="text" placeholder="Firstname"/>
-            <input type="text" placeholder="Lastname"/>
+            <input id="firstname" type="text" placeholder="Firstname"/>
+            <input id="lastname" type="text" placeholder="Lastname"/>
           </div>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Retype password" />
+          <input id="signup-email" type="email" placeholder="Email" />
+          <input id="signup-password" type="password" placeholder="Password" />
         </div>
-        <Link to={"/dashboard"}><input id="signup-submit" type="submit" value="Sign Up" /></Link>
+        <input id="signup-submit" type="submit" value="Sign Up" onClick={handleSignup} />
         <p>Already have an account?</p>
         <button onClick={(e) => {e.preventDefault(); handleDisplay("signup")}}>Log In</button>
       </div>
