@@ -1,4 +1,4 @@
-import {Header} from "./Components/Header/Header";
+import {Header} from "../Header/Header";
 import { Restaurants } from "./Components/Restaurants/Restaurants";
 import "./Components/Sass/Dashboard/Dashboard.css";
 

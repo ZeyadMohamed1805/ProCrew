@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import "../Sass/Lists/Lists.css";
 
-export const Lists = () => {
+export const Lists = (props) => {
   let path = window.location.pathname;
   let id = path[path.length - 1];
 
@@ -26,21 +26,21 @@ export const Lists = () => {
                   <h3>{item.breakfast_meal}</h3>
                   <div className="lists-add">
                     <p>${item.breakfast_price}.00</p>
-                    <button>Add Item</button>
+                    <button >Add Item</button>
                   </div>
                 </div>
                 <div className="lists-info">
                   <h3>{item.lunch_meal}</h3>
                   <div className="lists-add">
                     <p>${item.lunch_price}.00</p>
-                    <button>Add Item</button>
+                    <button >Add Item</button>
                   </div>
                 </div>
                 <div className="lists-info">
                   <h3>{item.dinner_meal}</h3>
                   <div className="lists-add">
                     <p>${item.dinner_price}.00</p>
-                    <button>Add Item</button>
+                    <button >Add Item</button>
                   </div>
                 </div>
               </div>

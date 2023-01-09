@@ -52,7 +52,6 @@ const selectData = (table) => {
 }
 
 // Select One
-
 const selectOneData = (table) => {
     app.get(`/get${table}/:id`, (request, response) => {
         let sql = `SELECT * FROM ${table} WHERE id = ${request.params.id}`;
