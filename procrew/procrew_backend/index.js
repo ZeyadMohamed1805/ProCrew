@@ -39,6 +39,22 @@ const insertData = (table) => {
     })
 }
 
+const insertItems = (table) => {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: false}));
+    app.post(`/add${table}`, (request, response) => {
+        let object = {id: `${request.body.id}`, name: `${request.body.name}`, price: `${request.body.price}`};
+        let sql = `INSERT INTO ${table} SET ?`;
+        let query = database.query(sql, object, (error, result) => {
+            if (error) {
+                throw error;
+            }
+            console.log(request.body);
+            response.send(result);
+        })
+    })
+}
+
 // Select All
 const selectData = (table) => {
     app.use(cors());
@@ -99,12 +115,15 @@ const deleteData = (table) => {
 selectData("clients");
 selectData("owners");
 selectData("menus");
+selectData("checkout");
 selectOneData("clients");
 selectOneData("owners");
 selectOneData("menus");
+selectOneData("checkout");
 insertData("clients");
 insertData("owners");
 insertData("menus");
+insertItems("checkout");
 
 app.listen("5000", () => {
     console.log("Server started on port 5000");

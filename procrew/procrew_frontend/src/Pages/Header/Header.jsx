@@ -1,11 +1,33 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import "./Sass/Header/Header.css";
 
 export const Header = (props) => {
   //   Opening & Closing Sidebar
   const [sideNavDisplay, setSideNavDisplay] = useState("none");
+
+  const handleCheckout = () => {
+    let names = [];
+    let prices = [];
+
+    props.cartItem.forEach(item => {
+        names.push(item.name);
+        prices.push(item.price);
+    });
+
+    fetch("http://localhost:5000/addcheckout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: 0,
+        name: names,
+        price: prices
+      })
+    })
+    .then(window.location.pathname = "/checkout");
+  }
 
   return (
     <header>
@@ -28,7 +50,7 @@ export const Header = (props) => {
                         </div>
                     ))}
                 <div id="side-nav-bottom">
-                    <Link to={"/checkout"} style={{width: "100%"}}><button>Checkout</button></Link>
+                    <button onClick={handleCheckout}>Checkout</button>
                 </div>
             </div>
         </nav>

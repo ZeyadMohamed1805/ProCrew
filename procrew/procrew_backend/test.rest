@@ -1,10 +1,8 @@
-POST http://localhost:5000/addclients
+POST http://localhost:5000/addcheckout
 Content-Type: application/json
 
 {
-    "id": 10,
-    "firstname": "firstname",
-    "lastname": "lastname",
-    "email": "email",
-    "password": "password"
+    "id": 0,
+    "name": ["afsg", "123", "465"],
+    "price": [465, 132, 798]
 }
