@@ -10,10 +10,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: auto;
+  min-height: calc(100vh - 125px);
   width: 80%;
   padding: 2rem 0;
 }
 #lists #lists-container #lists-items {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   background-color: #fff;
 }
@@ -22,7 +26,7 @@
   padding: 1rem 0;
   border-top: solid #888 1px;
 }
-#lists #lists-container #lists-items .lists-section .lists-description {
+#lists #lists-container #lists-items .lists-section .lists-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,14 +34,14 @@
   padding: 1rem;
   border-top: solid #888 1px;
 }
-#lists #lists-container #lists-items .lists-section .lists-description .lists-add {
+#lists #lists-container #lists-items .lists-section .lists-info .lists-add {
   display: flex;
   flex-direction: row;
   justify-content: auto;
   align-items: center;
   gap: 1rem;
 }
-#lists #lists-container #lists-items .lists-section .lists-description .lists-add button {
+#lists #lists-container #lists-items .lists-section .lists-info .lists-add button {
   background-color: #c41319;
   color: #fff;
   border: none;
@@ -46,7 +50,7 @@
   padding: 0.5rem 1rem;
   transition-duration: 0.5s;
 }
-#lists #lists-container #lists-items .lists-section .lists-description .lists-add button:hover {
+#lists #lists-container #lists-items .lists-section .lists-info .lists-add button:hover {
   background-color: transparent;
   color: #313131;
 }/*# sourceMappingURL=Lists.css.map */

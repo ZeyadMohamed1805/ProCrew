@@ -61,7 +61,7 @@ const selectOneData = (table) => {
                 throw error;
             }
             console.log(result);
-            response.send(`${table} item fetched...`);
+            response.send(result);
         })
     })
 }
@@ -97,6 +97,9 @@ const deleteData = (table) => {
 selectData("clients");
 selectData("owners");
 selectData("menus");
+selectOneData("clients");
+selectOneData("owners");
+selectOneData("menus");
 
 app.listen("5000", () => {
     console.log("Server started on port 5000");

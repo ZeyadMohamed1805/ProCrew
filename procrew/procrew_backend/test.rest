@@ -1,1 +1,1 @@
-GET http://localhost:5000/getclients
+GET http://localhost:5000/getmenus/3
