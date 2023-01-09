@@ -25,9 +25,9 @@ export const Restaurants = () => {
               {menusAPI
               .filter(item => {return searchName.toLowerCase() === "" && searchCategory.toLowerCase() === "" ? item : item.restaurant.toLowerCase().includes(searchName.toLowerCase()) && item.cuisine.toLowerCase().includes(searchCategory.toLowerCase())})
               .map(menu => (
-                  <Link key={menu.id} to={"/menu"}>
+                  <Link key={menu.id} to={`/menu/${menu.id}`}>
                     <div id={menu.id} className="restaurant">
-                      <i>{menu.restaurant}</i>
+                      <h2>{menu.restaurant}</h2>
                       <p>{menu.cuisine}</p>
                     </div>
                   </Link>

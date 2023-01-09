@@ -14,7 +14,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/form" element={<Form />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu/:id" element={<Menu />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>

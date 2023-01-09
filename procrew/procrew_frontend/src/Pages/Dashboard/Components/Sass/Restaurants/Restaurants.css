@@ -45,6 +45,13 @@
   background-color: #920d0d;
   border-radius: 10px;
   cursor: pointer;
+  transition-duration: 0.5s;
+}
+#restaurants #restaurants-container .restaurant:hover {
+  background-color: transparent;
+}
+#restaurants #restaurants-container .restaurant h2 {
+  color: #fff;
 }
 #restaurants #restaurants-container button {
   background-color: #c41319;
