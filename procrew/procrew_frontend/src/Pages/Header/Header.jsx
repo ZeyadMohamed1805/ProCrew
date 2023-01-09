@@ -22,9 +22,11 @@ export const Header = (props) => {
         </nav>
         <nav id="side-nav" style={{display: `${sideNavDisplay}`}}>
             <div id="side-nav-container">
-                <div id="side-nav-top">
-                    Cart Item
-                </div>
+                    {props.cartItem.map(item => (
+                        <div id="side-nav-top">
+                            <p>{item.name}{item.price}</p>
+                        </div>
+                    ))}
                 <div id="side-nav-bottom">
                     <Link to={"/checkout"} style={{width: "100%"}}><button>Checkout</button></Link>
                 </div>
